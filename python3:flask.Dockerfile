@@ -15,4 +15,5 @@ RUN ${INSTALL_COMMAND}
 #ENTRYPOINT flask run
 
 ## 2. run with --app argument
-ENTRYPOINT flask --app app run --host=0.0.0.0
+ENV START_COMMAND="flask --app app run --host=0.0.0.0"
+ENTRYPOINT ${START_COMMAND}
