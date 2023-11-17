@@ -10,8 +10,8 @@ RUN pip install -r requirements.txt
 
 # 2. flask run
 ## 1. run with FLASK_APP env
-#ENV FLASK_APP="hello.py"
+#ENV FLASK_APP="app.py"
 #ENTRYPOINT flask run
 
 ## 2. run with --app argument
-ENTRYPOINT flask --app hello run --host=0.0.0.0
+ENTRYPOINT flask --app app run --host=0.0.0.0
