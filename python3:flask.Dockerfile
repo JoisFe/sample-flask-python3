@@ -6,7 +6,8 @@ WORKDIR /app
 COPY . .
 
 # 1. install package
-RUN pip install -r requirements.txt
+ARG INSTALL_COMMAND="pip install -r requirements.txt"
+RUN ${INSTALL_COMMAND}
 
 # 2. flask run
 ## 1. run with FLASK_APP env
